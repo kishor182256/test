@@ -1,6 +1,6 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import App, { replaceCamelWithSpaces } from './App';
-
+// new tst cases
 test('button has correct initial color', () => {
   render(<App />);
 
