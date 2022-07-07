@@ -45,6 +45,11 @@ test('Checkbox disables button on first click and enables on second click', () =
 });
 
 
+
+
+
+
+
 test('Disabled button has gray background and reverts to red', () => {
   render(<App />);
   const checkbox = screen.getByRole('checkbox', { name: 'Disable button' });
@@ -61,16 +66,3 @@ test('Disabled button has gray background and reverts to red', () => {
   expect(colorButton).toHaveStyle('background-color: red');
 });
 
-
-//multiple test cases
-describe('spaces before camel-case capital letters', () => {
-  test('Works for no inner capital letters', () => {
-    expect(replaceCamelWithSpaces('Red')).toBe('Red');
-  });
-  test('Works for one inner capital letter', () => {
-    expect(replaceCamelWithSpaces('MidnightBlue')).toBe('Midnight Blue');
-  });
-  test('Works for multiple inner capital letters', () => {
-    expect(replaceCamelWithSpaces('MediumVioletRed')).toBe('Medium Violet Red');
-  });
-});
